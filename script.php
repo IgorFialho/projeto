@@ -12,6 +12,20 @@ $categorias[] = 'idoso';
 $nome = $_POST['nome'] ;
 $idade = $_POST['idade'];
 
+if(empty($nome)){
+   
+  echo "E necessário inserir o nome do competidor";
+  return;
+}
+
+if(strlen($nome) < 3 || strlen($nome) > 40){
+
+  echo "O nome deve conter mais de 3 cacteres e possuir no maximo 40"; 
+  return;
+}
+
+if(!is_numeric($idade)) 
+
 if($idade >= 6 && $idade <= 12){
     
   echo "O nadador " .$nome. " tem idade de " .$idade. " anos, sua categoria será ".$categorias[0]. ".";
