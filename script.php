@@ -24,7 +24,10 @@ if(strlen($nome) < 3 || strlen($nome) > 40){
   return;
 }
 
-if(!is_numeric($idade)) 
+if(!is_numeric($idade)){
+
+  
+}
 
 if($idade >= 6 && $idade <= 12){
     
